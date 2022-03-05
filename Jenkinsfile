@@ -14,7 +14,7 @@ pipeline{
     }
     stage('AWSCLI code exucution'){
       steps{
-        sh "aws lambda create-function --function-name Nexus --runtime python3.9 --timeout 60 --zip-file fileb://Nexus.zip --handler Nexus.lambda_handler  --role arn:aws:iam::462173630261:role/full_access_role --region us-east-2"
+        sh "aws lambda create-function --function-name Nexus --runtime python3.9 --timeout 840 --zip-file fileb://Nexus.zip --handler Nexus.lambda_handler  --role arn:aws:iam::462173630261:role/full_access_role --region us-east-2"
       }
     }
     stage('Cleaning WS1'){
